@@ -6,6 +6,7 @@
 @import "tailwindcss/utilities";
 @import "utilities.css";
 
+
 /* ================================== COMMON ===================================== */
 
 @import url("https://fonts.googleapis.com/css?family=Kanit:200,400,700&display=swap");
@@ -248,7 +249,6 @@ nav.gr:before {
 /* =================================== DASHBOARD ======================================== */
 
 #hero {
-  @apply overflow-hidden;
   height: 85vh;
   max-height: 800px;
   background: linear-gradient(
@@ -259,7 +259,6 @@ nav.gr:before {
 }
 
 #hero .title-image {
-  @apply absolute top-0 right-0 w-4/5;
   z-index: -1;
   object-fit: cover;
   object-position: top left;
@@ -268,7 +267,6 @@ nav.gr:before {
 }
 
 .info-wrapper {
-  @apply w-2/5 h-full pt-40 pr-48 pb-5 pl-12 bg-black;
   min-width: 600px;
   box-sizing: border-box;
   background: linear-gradient(
@@ -278,46 +276,15 @@ nav.gr:before {
   );
 }
 
-.category {
-  @apply w-24 flex items-center justify-between;
-}
-
-.category img {
-  @apply w-5;
-}
-
-.category span {
-  @apply uppercase text-gray-700 text-sm;
+.info-wrapper span{
   letter-spacing: 5px;
 }
-
-.title-logo {
-  @apply w-4/5 mt-5 mr-0 mb-2 ml-0;
-}
-
-.title-logo img {
-  @apply w-full;
-}
-
-.seasons-info {
-  @apply text-white flex font-thin justify-between items-center text-sm w-32;
-}
-
-.seasons-info .rating {
+.rating {
   border: solid 1px rgba(255, 255, 255, 0.4);
   padding: 1px 4px;
 }
 
-.synopsis {
-  @apply text-gray-600 font-thin text-lg mx-0 my-4;
-}
-
-.buttons-layer {
-  @apply flex justify-between;
-}
-
 .watch {
-  @apply text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5;
   transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
@@ -327,17 +294,11 @@ nav.gr:before {
 }
 
 .watch:hover {
-  @apply bg-blue-400;
   transform: scale(1.03);
 }
 
-.likes {
-  @apply flex justify-between;
-}
-
-.likes .like,
-.likes .unlike {
-  @apply block border border-white opacity-75 w-8 h-8;
+.like,
+.unlike {
   text-indent: -9999px;
   margin: 0 2px;
   border-radius: 50%;
@@ -346,13 +307,8 @@ nav.gr:before {
   transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.likes .like:hover,
-.likes .unlike:hover {
-  @apply opacity-100;
-}
-
-.likes .unlike {
-  transform: rotate(180deg);
+.unlike {
+  transform: rotateX(180deg);
 }
 
 /* =================================== SLIDER ======================================== */
@@ -360,22 +316,15 @@ nav.gr:before {
   margin-top: -5vw;
 }
 
-.content {
-  @apply mt-20;
-}
-
 .slider {
-  @apply relative;
   margin: 3vw 0 0 0;
 }
 
 .slider-frame {
-  @apply relative left-0;
   transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .slider-container {
-  @apply flex relative;
   padding: 0 3vw;
 }
 
@@ -589,4 +538,217 @@ nav.gr:before {
 
 .silk-transition {
   transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+/* =================================== SEARCH RESULTS ======================================== */
+.filters{
+  color:white;
+  width:93.75%;
+  margin: auto;
+  padding-top:60px;
+  display:flex;
+
+}
+.suggestionsLabel{
+  color: #a9a9a9;
+  width:17%;
+}
+.filters ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap: wrap;
+}
+.filters ul li{
+  padding:0 5px 5px 5px;
+  margin-right:7px;
+  border-right:1px solid rgb(99, 99, 99);
+}
+.filters ul li a{
+  font-weight:200;
+}
+
+/* ==================================== LOGING ========================================= */
+
+.login-page {
+  background: url(../img/background-app.jpg) top left no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page:before {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#loginform {
+  width: 460px;
+  background: #090909;
+  border-radius: 2px;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#loginform .logo {
+  margin-bottom: 30px;
+  min-height: 35px;
+  width: 100%;
+}
+
+.field p {
+  background: #292929;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 12px 9px;
+  margin: 15px 0;
+  transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+form label {
+  color: #a9a9a9;
+  cursor: pointer;
+  margin-bottom:5px;
+}
+
+.field input,.field textarea  {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+.error p {
+  margin-bottom: 5px;
+  border-bottom: 2px solid #da8747;
+}
+
+.error-message {
+  display: none;
+  color: #da8747;
+  margin: 0 0 15px 0;
+  transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.error .error-message {
+  display: block;
+}
+
+.submit {
+  border: none;
+  background: #17C8FF;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  border-radius: 2px;
+  line-height: 50px;
+  cursor: pointer;
+  outline: none;
+  transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  font-size: 18px;
+  text-align: center;
+}
+
+.submit:hover {
+  background: white;
+  color: #17C8FF;
+}
+
+#loginform aside {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:400px) {
+  #loginform aside {
+      flex-direction: column;
+  }
+}
+
+#loginform .checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox label {
+  margin-left: 7px;
+}
+
+
+/* =================================== DASHBOARD ======================================== */
+/* =================================== ITEM FORM ======================================== */
+.form-container{
+  padding-top:80px;
+  width:90%;
+  margin:auto;
+}
+.form-container form{
+  display: flex;
+  justify-content:space-between;
+}
+.form-container section{
+  border:none;
+  width:45%;    
+  display:flex;
+  flex-direction: column;
+  
+  
+}
+.form-container section p:last-child{
+  margin-top:auto;
+  
+}
+
+#mainError{
+  position:absolute;
+  background:black;
+  top:-500px;
+  right:40px;
+  border-radius:3px;
+  z-index:500;
+  padding:40px;
+  width:320px;
+  transition: .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#mainError .close{
+  width:30px;
+  height:30px;
+  right:10px;
+  top:10px;
+}
+#mainError h3{
+  background:url(../img/warning.svg) center left no-repeat;
+  padding-left:40px;
+}
+#mainError p{
+  color:white;
+  line-height:1.4rem;
+}
+#mainError.triggered{
+  top:30px;
+  animation-name: errorBlink;
+animation-duration: 1s;
+animation-delay: .5s;
+animation-timing-function: ease-in-out;
+}
+@keyframes errorBlink {
+  0% {background-color: black;}
+  25% {background-color: rgb(157, 0, 0);}
+  100% {background-color: black;}
 }
