@@ -3,7 +3,9 @@
 module.exports = {
   extends: 'recommended',
   rules: {
-    'no-implicit-this': true,
-    'self-closing-void-elements':false
+    'no-implicit-this': {
+      allow: ['mouseover']
+    },
+    'self-closing-void-elements': false
   }
 };
