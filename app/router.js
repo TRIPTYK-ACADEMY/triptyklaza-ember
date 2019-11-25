@@ -8,4 +8,11 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('form-new-item');
+  this.route('signup');
+  this.route('login');
+
+  this.route('series', function() {
+    this.route('rickandmorty');
+    this.route('happy');
+  });
 });

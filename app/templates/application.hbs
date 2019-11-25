@@ -1,70 +1,61 @@
-<nav id="mainNav" class="gr">
-  <a href="#" class="logo">
-    Triptyklazza
-  </a>
-  <ul class="main-menu">
-    <li>
-      <LinkTo @route="application">
-        Home
-      </LinkTo>
-    </li>
-    <li>
-      <a href="#">
-        Tv Shows
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Movies
-      </a>
-    </li>
-  </ul>
-  <div class="search" id="searchBlock">
-    <form>
-      <p>
-        <label for="search">
-          Search
-        </label>
-        <input type="search" id="search" name="search" placeholder="Titles, people, genres" />
-      </p>
-    </form>
+<div class="h-screen flex flex-col">
+  <nav id="mainNav" class="gr">
+    <LinkTo @route="application" class="logo">
+      Triptyklazza
+    </LinkTo>
+    <ul class="main-menu">
+      <li>
+        <LinkTo @route="application">
+          Home
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="form-new-item">
+          Tv Shows
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="form-new-item">
+          Movies
+        </LinkTo>
+      </li>
+    </ul>
+    <div class="search" id="searchBlock">
+      <form>
+        <p>
+          <label for="search">
+            Search
+          </label>
+          <input type="search" id="search" name="search" placeholder="Titles, people, genres" />
+        </p>
+      </form>
+    </div>
+    <ul class="profile-menu">
+      <li>
+        <p class="avatar">
+          BG
+        </p>
+        <ul class="sub-menu">
+          <li>
+            <LinkTo @route="application">
+              Manage profile
+            </LinkTo>
+          </li>
+          <li>
+            <LinkTo @route="form-new-item">
+              Add Video
+            </LinkTo>
+          </li>
+          <li>
+            <LinkTo @route="login">
+              Sign out
+            </LinkTo>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="h-screen">
+    {{outlet}}
   </div>
-  <ul class="profile-menu">
-    <li>
-      <p class="avatar">
-        BG
-      </p>
-      <ul class="sub-menu">
-        <li>
-          <a href="">
-            Manage profile
-          </a>
-        </li>
-        <li>
-          <LinkTo @route="form-new-item">
-            Add Video
-          </LinkTo>
-        </li>
-        <li>
-          <a href="index.html">
-            Sign Out
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-{{outlet}}
-<footer></footer>
-<div id="mainError">
-  <span class="close">
-    Close
-  </span>
-  <h3>
-    Error
-  </h3>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum dolorum, libero quae, repellat, qui
-        quibusdam fuga hic blanditiis id rerum. Odit velit magnam consectetur distinctio ut ullam eius odio!
-  </p>
 </div>
