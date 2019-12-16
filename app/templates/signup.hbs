@@ -1,46 +1,5 @@
 <div class="bg-cover  bg-left-top bg-no-repeat flex justify-center items-center login-page h-screen"
   style="background-image: url(../img/background-app.jpg);">
-  <form method="POST" id="loginform" class="flex flex-col justify-start bg-black  p-16 rounded-sm"
-    style=" box-sizing: border-box; width:460px;">
-    <a href="index.html" class="logo mb-8 w-full" style="min-height:35px;">Triptyklazza</a>
-    <h3>Sign Up</h3>
-
-    <p class="flex flex-col bg-gray-800 rounded-sm cursor-pointer py-2 px-3 my-4 ">
-      <label for="email" class="text-gray-500 cursor-pointer mb-2">Email</label>
-      <input type="email" id="email" name="email" required="true"
-        class="bg-transparent outline-none text-white leading-normal text-base">
-    </p>
-    <span class="error-message">Erreur machin</span>
-
-
-
-    <p class="flex flex-col bg-gray-800 rounded-sm cursor-pointer py-2 px-3 my-4 ">
-      <label for="pwd" class="text-gray-500 cursor-pointer mb-2">Password</label>
-      <input type="password" id="pwd" name="password" required="true"
-        class="bg-transparent outline-none text-white leading-normal text-base">
-    </p>
-    <span class="error-message">Erreur machin</span>
-
-
-    <p class="flex flex-col bg-gray-800 rounded-sm cursor-pointer py-2 px-3 my-4 ">
-      <label for="pwdcheck" class="text-gray-500 cursor-pointer mb-2">Retype Password</label>
-      <input type="passwordcheck" id="pwdcheck" name="passwordcheck" required="true"
-        class="bg-transparent outline-none text-white leading-normal text-base">
-    </p>
-    <span class="error-message">Erreur machin</span>
-
-    <p class="my-4">
-      <a href="#" onclick="login()"
-        class="bg-blue-500 hover:bg-white text-white hover:text-blue-500 rounded-sm  border-none w-full inline-block text-center cursor-pointer outline-none text-lg"
-        style="line-height:50px;">Sign Up</a>
-    </p>
-
-  </form>
-  <div id="mainError">
-    <span class="close">Close</span>
-    <h3>Error</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum dolorum, libero quae, repellat, qui
-      quibusdam fuga hic blanditiis id rerum. Odit velit magnam consectetur distinctio ut ullam eius odio!</p>
-  </div>
+  <SignupUi />
 
 </div>

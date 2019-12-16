@@ -1,0 +1,183 @@
+<div class="slider relative s{{@sliderId}}" id={{@anchor}}>
+  <h2>
+    {{@section}}
+  </h2>
+  <div class="slider-frame relative left-0">
+    <div class="slider-container flex relative" {{slider-over}} {{slider-show}}>
+      <ThumbMovie 
+        @id="rickandmorty{{@sliderId}}"
+        @name="Rick and Morty"
+        @route="series.rickandmorty"
+        @thumbPath="img/series/rickandmorty-thumb.jpg"
+        @year="2017"
+        @rating="13"
+        @numberSeason="3"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="happy{{@sliderId}}"
+        @name="Happy"
+        @route="series.happy"
+        @thumbPath="img/series/happy-thumb.jpg"
+        @year="2019"
+        @rating="16"
+        @numberSeason="2"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="disenchantment{{@sliderId}}"
+        @name="Disenchantment"
+        @route="application"
+        @thumbPath="img/series/disenchantment-thumb.jpg"
+        @year="2019"
+        @rating="13"
+        @numberSeason="2"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="papel{{@sliderId}}"
+        @name="la casa de Papel"
+        @route="application"
+        @thumbPath="img/series/papel-thumb.jpg"
+        @year="2017"
+        @rating="16"
+        @numberSeason="3"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="b99{{@sliderId}}"
+        @name="Brooklyn 99"
+        @route="application"
+        @thumbPath="img/series/b99-thumb.jpg"
+        @year="2017"
+        @rating="13"
+        @numberSeason="5"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="lucifer{{@sliderId}}"
+        @name="Lucifer"
+        @route="application"
+        @thumbPath="img/series/lucifer-thumb.jpg"
+        @year="2019"
+        @rating="13"
+        @numberSeason="4"
+        @anchor={{@anchor}}
+      />
+      <ThumbMovie 
+        @id="dark{{@sliderId}}"
+        @name="Dark"
+        @route="application"
+        @thumbPath="img/series/dark-thumb.jpg"
+        @year="2017"
+        @rating="16"
+        @numberSeason="3"
+        @anchor={{@anchor}}
+      />
+    </div>
+  </div>
+  <div class="infos-wrapper">
+    <span class="close" {{slider-close}}>
+      Close
+    </span>
+    <DetailMovie 
+      @id="rickandmorty{{@sliderId}}"
+      @name="Rick and Morty"
+      @route="series.rickandmorty"
+      @type="Series"
+      @logoPath="img/series/rickandmorty-logo.png"
+      @backgroundPath="img/series/rickandmorty-hero.jpg"
+      @year="2017"
+      @numberSeason="3"
+      @rating="16"
+    >
+      Brilliant but boozy scientist Rick hijacks his fretful teenage grandson,
+                Morty, for
+                wild escapades in other worlds and alternate dimensions.
+    </DetailMovie>
+    <DetailMovie 
+      @id="happy{{@sliderId}}"
+      @name="Happy"
+      @route="series.happy"
+      @type="Series"
+      @logoPath="img/series/happy-logo.png"
+      @backgroundPath="img/series/happy-hero.jpg"
+      @year="2019"
+      @numberSeason="2"
+      @rating="16"
+    >
+      Hailey and Nick spend a father-daughter day together, but a gambling side
+                      trip and a quick gig to "deliver a package" complicate their relationship.
+    </DetailMovie>
+    <DetailMovie 
+      @id="disenchantment{{@sliderId}}"
+      @name="Disenchantment"
+      @route="application"
+      @type="Series"
+      @logoPath="img/series/disenchantment-logo.png"
+      @backgroundPath="img/series/disenchantment-hero.jpg"
+      @year="2017"
+      @numberSeason="2"
+      @rating="13"
+    >
+      Princess Bean already has the wedding day blues when a mysterious figure
+                      arrives, claiming he's her personal demon. Elfo hates his happy homeland.
+    </DetailMovie>
+    <DetailMovie 
+      @id="papel{{@sliderId}}"
+      @name="la casa de Papel"
+      @route="application"
+      @type="Series"
+      @logoPath="img/series/papel-logo.png"
+      @backgroundPath="img/series/papel-hero.jpg"
+      @year="2019"
+      @numberSeason="3"
+      @rating="16"
+    >
+      Eight thieves take hostages and lock themselves in the Royal Mint of Spain
+                      as a criminal mastermind manipulates the police to carry out his plan.
+    </DetailMovie>
+    <DetailMovie 
+      @id="b99{{@sliderId}}"
+      @name="Brooklyn 99"
+      @route="application"
+      @type="Series"
+      @logoPath="img/series/b99-logo.png"
+      @backgroundPath="img/series/b99-hero.jpg"
+      @year="2017"
+      @numberSeason="5"
+      @rating="13"
+    >
+      Jake jumps into action when Terry's wife goes into labor at the precinct.
+                      Meanwhile, an Internet outage forces the team to go old-school.
+    </DetailMovie>
+    <DetailMovie 
+      @id="lucifer{{@sliderId}}"
+      @name="Lucifer"
+      @route="application"
+      @type="Series"
+      @logoPath="img/series/lucifer-logo.png"
+      @backgroundPath="img/series/lucifer-hero.jpg"
+      @year="2019"
+      @numberSeason="2"
+      @rating="16"
+    >
+      While feeling the heat to return to hell, Lucifer makes time to
+                      investigate how overeager paparazzi contributed to a young man's death.
+    </DetailMovie>
+    <DetailMovie 
+      @id="dark{{@sliderId}}"
+      @name="Dark"
+      @route="application"
+      @type="Series"
+      @logoPath="img/series/dark-logo.png"
+      @backgroundPath="img/series/dark-hero.jpg"
+      @year="2019"
+      @numberSeason="2"
+      @rating="16"
+    >
+      It's 1986, and Ulrich's brother, Mads, has been missing for a month.
+                      Confusion reigns as past and present intertwine.
+    </DetailMovie>
+  </div>
+</div>
