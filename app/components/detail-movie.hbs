@@ -1,0 +1,45 @@
+<div class="info-container" id="{{@id}}-infos">
+  <div class="info-wrapper w-2/5 h-full pt-40 pr-48 pb-5 pl-12">
+    <div class="w-24 flex items-center justify-between">
+      <img src="img/t-logo.svg" alt="Triptyklazza" class="w-5" />
+      <span class="uppercase text-gray-700 text-sm">
+        {{@type}}
+      </span>
+    </div>
+    <div class="w-4/5 mt-5 mr-0 mb-2 ml-0">
+      <img src={{@logoPath}} alt={{@name}} class="w-full" />
+    </div>
+    <div class="text-white flex font-thin justify-between items-center text-sm w-32">
+      <p class="year">
+        {{@year}}
+      </p>
+      <p class="rating">
+        {{@rating}}+
+      </p>
+      {{#if @numberSeason}}
+        <p class="duration">
+          {{@numberSeason}} Seasons
+        </p>
+      {{/if}}
+    </div>
+    <div class="text-gray-600 font-thin text-lg mx-0 my-4">
+      {{yield}}
+    </div>
+    <div class="flex justify-between">
+      <LinkTo @route={{@route}} class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+        <span>
+          Watch now
+        </span>
+      </LinkTo>
+      <div class="flex justify-between">
+        <a href="" class="like block border border-white opacity-75 w-8 h-8 hover:opacity-100">
+          Like
+        </a>
+        <a href="" class="unlike block border border-white opacity-75 w-8 h-8 hover:opacity-100">
+          Don't like
+        </a>
+      </div>
+    </div>
+  </div>
+  <img src={{@backgroundPath}} alt={{@name}} class="title-image absolute top-0 right-0 w-4/5" />
+</div>

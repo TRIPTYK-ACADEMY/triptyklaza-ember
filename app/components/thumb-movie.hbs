@@ -1,0 +1,35 @@
+<div class="slider-item" data-info="{{@id}}-infos">
+  <img src={{@thumbPath}} alt="" />
+  <div class="item-infos">
+    <LinkTo @route={{@route}}
+      class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+      <span class="hidden">
+        Watch now
+      </span>
+    </LinkTo>
+    <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
+      {{@name}}
+    </h4>
+    <div class="text-white flex font-thin justify-between items-center text-sm w-32">
+      <p class="year">
+        {{@year}}
+      </p>
+      <p class="rating">
+        {{@year}}+
+      </p>
+      {{#if @duration}}
+        <p class="duration">
+          {{@duration}}
+        </p>
+      {{/if}}
+      {{#if @numberSeason}}
+        <p class="duration">
+          {{@numberSeason}}
+        </p>
+      {{/if}}
+    </div>
+    <a href="#{{@anchor}}" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
+      Info
+    </a>
+  </div>
+</div>
