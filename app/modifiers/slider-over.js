@@ -1,9 +1,7 @@
 import { modifier } from 'ember-modifier';
 import { debounce } from '@ember/runloop';
 
-let myContext = { name: 'debounce' };
-export default modifier(function sliderOver(element, params/*, params, hash*/) {
-  let context = params[0];
+export default modifier(function sliderOver(element) {
   let slides = element.querySelectorAll(".slider-item");
   let sliderFrame;
   if (element.parentElement.classList.contains("slider-frame")) {
@@ -13,64 +11,38 @@ export default modifier(function sliderOver(element, params/*, params, hash*/) {
 
   slides.forEach(
     (slide, i) => {
-      // slideOverEvent(slide, i);
-      slide.addEventListener("mouseover", slideOverEvent)
-      slide.addEventListener("mouseout", slideOutEvent)
+      slide.addEventListener("mouseover", slideOverEventDebounce)
+      slide.addEventListener("mouseout", slideOutEventDebounce)
 
-      function slideOverEvent(){
-        debounce(function() {
-          console.log("TRIGGER");
-          if (i > 0) {
-            sliderFrame.style.left = `-${slide.offsetWidth / 2}px`;
-          }
-          for (var j = i + 1; j < slides.length; j++) {
-            slides[j].style.left = `${slide.offsetWidth}px`;
-          }
-          slide.style.transform = `scale(${scaling})`;
-          slide.style.left = `${slide.offsetWidth / 2}px`
-        }, 1000)
-      };
-    
-      function slideOutEvent(){
-        debounce(function() {
-          if (i > 0) {
-            sliderFrame.style.left = 0;
-          }
-          for (var j = i + 1; j < slides.length; j++) {
-            slides[j].style.left = 0;
-          }
-          slide.style.transform = "scale(1)";
-          slide.style.left = 0;
-        }, 1000)
-      };
+      function slideOverEventDebounce(){
+        debounce(slideOverEvent, 250)
+      }
       
-      // slide.addEventListener("mouseout", debounce(context, function () {
-      //   if (i > 0) {
-      //     sliderFrame.style.left = 0;
-      //   }
-      //   for (var j = i + 1; j < slides.length; j++) {
-      //     slides[j].style.left = 0;
-      //   }
-      //   slide.style.transform = "scale(1)";
-      //   slide.style.left = 0;
-      // }, 250))
+      function slideOverEvent(){
+        if (i > 0) {
+          sliderFrame.style.left = `-${slide.offsetWidth / 2}px`;
+        }
+        for (var j = i + 1; j < slides.length; j++) {
+          slides[j].style.left = `${slide.offsetWidth}px`;
+        }
+        slide.style.transform = `scale(${scaling})`;
+        slide.style.left = `${slide.offsetWidth / 2}px`
+      }
+
+      function slideOutEventDebounce(){
+        debounce(slideOutEvent, 250)
+      }
+
+      function slideOutEvent(){
+        if (i > 0) {
+          sliderFrame.style.left = 0;
+        }
+        for (var j = i + 1; j < slides.length; j++) {
+          slides[j].style.left = 0;
+        }
+        slide.style.transform = "scale(1)";
+        slide.style.left = 0;
+      }
     }
   );
-
-  
-  // function debounce(func, wait, immediate) {
-  //   var timeout;
-  //   return function () {
-  //     var context = this,
-  //       args = arguments;
-  //     var later = function () {
-  //       timeout = null;
-  //       if (!immediate) func.apply(context, args);
-  //     };
-  //     var callNow = immediate && !timeout;
-  //     clearTimeout(timeout);
-  //     timeout = setTimeout(later, wait);
-  //     if (callNow) func.apply(context, args);
-  //   };
-  // };
 });

@@ -25,7 +25,7 @@
             wild escapades in other worlds and alternate dimensions.
     </div>
     <div class="flex justify-between">
-      <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+      <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2 py-2">
         Watch now
       </LinkTo>
       <div class="flex justify-between">
@@ -46,16 +46,16 @@
       Tv Shows
     </h2>
     <div class="slider-frame relative left-0">
-      <div class="slider-container flex relative" {{slider-over this}}>
+      <div class="slider-container flex relative" {{slider-over}} {{slider-show}}>
         <div class="slider-item" data-info="rickandmorty-infos">
           <img src="img/series/rickandmorty-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Rick And Morty
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -69,7 +69,7 @@
                 3 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -77,12 +77,12 @@
         <div class="slider-item" data-info="happy-infos">
           <img src="img/series/happy-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Happy
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -96,20 +96,20 @@
                 2 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
         </div>
-        <div class="slider-item active" data-info="disenchantment-infos">
+        <div class="slider-item" data-info="disenchantment-infos">
           <img src="img/series/disenchantment-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Disenchantment
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -123,7 +123,7 @@
                 2 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -131,12 +131,12 @@
         <div class="slider-item" data-info="papel-infos">
           <img src="img/series/papel-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Money Heist
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -150,7 +150,7 @@
                 3 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -158,12 +158,12 @@
         <div class="slider-item" data-info="b99-infos">
           <img src="img/series/b99-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Brookly Nine Nine
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -177,7 +177,7 @@
                 5 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -185,12 +185,12 @@
         <div class="slider-item" data-info="lucifer-infos">
           <img src="img/series/lucifer-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
-                Watch now
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
+                watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Lucifer
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -204,7 +204,7 @@
                 4 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -212,12 +212,12 @@
         <div class="slider-item" data-info="dark-infos">
           <img src="img/series/dark-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Dark
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -231,15 +231,15 @@
                 3 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="infos-wrapper shown">
-      <span class="close">
+    <div class="infos-wrapper">
+      <span class="close" {{slider-close}}>
         Close
       </span>
       <div class="info-container" id="rickandmorty-infos">
@@ -270,7 +270,7 @@
                         wild escapades in other worlds and alternate dimensions.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -314,7 +314,7 @@
                         trip and a quick gig to "deliver a package" complicate their relationship.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -358,7 +358,7 @@
                         arrives, claiming he's her personal demon. Elfo hates his happy homeland.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -402,7 +402,7 @@
                         as a criminal mastermind manipulates the police to carry out his plan.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -446,7 +446,7 @@
                         Meanwhile, an Internet outage forces the team to go old-school.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -490,7 +490,7 @@
                         investigate how overeager paparazzi contributed to a young man's death.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -534,7 +534,7 @@
                         Confusion reigns as past and present intertwine.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               <span>
                 Watch now
               </span>
@@ -563,12 +563,12 @@
         <div class="slider-item" data-info="swlj-infos">
           <img src="img/movies/swlj-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Star Wars: Episode VIII: The Last Jedi
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -582,7 +582,7 @@
                 2h 31m
               </p>
             </div>
-            <a href="#blockbusters" class="deploy">
+            <a href="#blockbusters" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -590,12 +590,12 @@
         <div class="slider-item" data-info="happy-infos">
           <img src="img/series/happy-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Happy
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -609,7 +609,7 @@
                 2 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -617,12 +617,12 @@
         <div class="slider-item" data-info="disenchantment-infos">
           <img src="img/series/disenchantment-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Disenchantment
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -636,7 +636,7 @@
                 2 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -644,12 +644,12 @@
         <div class="slider-item" data-info="papel-infos">
           <img src="img/series/papel-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Money Heist
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -663,7 +663,7 @@
                 3 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -671,12 +671,12 @@
         <div class="slider-item" data-info="b99-infos">
           <img src="img/series/b99-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Brookly Nine Nine
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -690,7 +690,7 @@
                 5 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -698,12 +698,12 @@
         <div class="slider-item" data-info="lucifer-infos">
           <img src="img/series/lucifer-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Lucifer
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -717,7 +717,7 @@
                 4 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -725,12 +725,12 @@
         <div class="slider-item" data-info="dark-infos">
           <img src="img/series/dark-thumb.jpg" alt="" />
           <div class="item-infos">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
-              <span>
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
+              <span class="hidden">
                 Watch now
               </span>
             </LinkTo>
-            <h4 class="title">
+            <h4 class="text-white sm:mt-2 sm:mb-1 sm:text-xs lg:my-3 lg:text-sm">
               Dark
             </h4>
             <div class="text-white flex font-thin justify-between items-center text-sm w-32">
@@ -744,7 +744,7 @@
                 3 Seasons
               </p>
             </div>
-            <a href="#tvshows" class="deploy">
+            <a href="#tvshows" class="deploy p-5 block sm:p-0 md:pb-2 lg:pb-3 xl:pt-2">
               Info
             </a>
           </div>
@@ -780,7 +780,7 @@
                         wild escapades in other worlds and alternate dimensions.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="series.rickandmorty" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -822,7 +822,7 @@
                         trip and a quick gig to "deliver a package" complicate their relationship.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="series.happy" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -864,7 +864,7 @@
                         arrives, claiming he's her personal demon. Elfo hates his happy homeland.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -906,7 +906,7 @@
                         as a criminal mastermind manipulates the police to carry out his plan.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -948,7 +948,7 @@
                         Meanwhile, an Internet outage forces the team to go old-school.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -990,7 +990,7 @@
                         investigate how overeager paparazzi contributed to a young man's death.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">
@@ -1032,7 +1032,7 @@
                         Confusion reigns as past and present intertwine.
           </div>
           <div class="flex justify-between">
-            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-2 px-5 hover:bg-blue-400">
+            <LinkTo @route="application" class="watch text-white bg-blue-500 rounded-sm uppercase font-thin text-center w-48 py-1 px-5 hover:bg-blue-400 mb-2">
               Watch now
             </LinkTo>
             <div class="flex justify-between">

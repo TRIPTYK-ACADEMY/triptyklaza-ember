@@ -1,0 +1,229 @@
+/* =================================== DASHBOARD ======================================== */
+
+#hero {
+  height: 85vh;
+  max-height: 800px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 15%
+  );
+}
+
+#hero .title-image {
+  z-index: -1;
+  object-fit: cover;
+  object-position: top left;
+  height: 85vh;
+  max-height: 800px;
+}
+
+.info-wrapper {
+  min-width: 600px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 68%,
+    rgba(0, 0, 0, 0) 97%
+  );
+}
+
+.info-wrapper span{
+  letter-spacing: 3px;
+}
+.rating {
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  padding: 1px 4px;
+}
+
+.watch {
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.watch:before {
+  @apply text-lg mr-2;
+  content: "►";
+}
+
+.watch:hover {
+  transform: scale(1.03);
+}
+
+.like,
+.unlike {
+  text-indent: -9999px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background: url(../img/like.svg) center 3px no-repeat;
+  background-size: 70%;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.unlike {
+  transform: rotateX(180deg);
+}
+
+/* =================================== SLIDER ======================================== */
+.hero-content {
+  margin-top: -5vw;
+}
+
+.slider {
+  margin: 3vw 0 0 0;
+}
+
+.slider-frame {
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.slider-container {
+  padding: 0 3vw;
+}
+
+.slider-item {
+  @apply relative m-0 left-0 border-2 border-black cursor-pointer;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.slider-item.active {
+  @apply border-2 border-white;
+}
+
+.slider-item.active:after {
+  @apply block absolute;
+  content: "";
+  bottom: -10px;
+  right: calc(50% - 10px);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+.slider-item img {
+  @apply w-full h-full;
+}
+
+.slider-item:hover {
+  z-index: 300;
+}
+
+.item-infos {
+  @apply absolute bottom-0 left-0 w-full opacity-0;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 1.5vw 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.slider-item:hover .item-infos {
+  @apply opacity-100;
+}
+
+/* .item-infos .watch {
+  width: 2vw;
+  padding: 0.1vw 1vw;
+} */
+
+.item-infos .watch:after {
+  font-size: 1vw;
+}
+
+.deploy {
+  text-indent: -9999px;
+  background: url(../img/down-chevron.svg) center center no-repeat;
+  background-size: 2vw;
+}
+
+.deploy:hover {
+  filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(6);
+}
+
+.infos-wrapper {
+  @apply relative overflow-hidden w-screen z-0;
+  max-height: 0;
+}
+
+.close {
+  @apply inline-block cursor-pointer absolute w-10;
+  line-height: 40px;
+  right: 40px;
+  top: 30px;
+  text-indent: -9999px;
+  background: url(../img/close.svg);
+  background-size: cover;
+  z-index: 10;
+}
+
+.info-container {
+  @apply w-screen overflow-hidden absolute top-0 opacity-0;
+  transition: all 0.5s ease-in-out;
+  height: 85vh;
+  max-height: 740px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 15%
+  );
+}
+
+.infos-wrapper.shown {
+  height: 85vh;
+  max-height: 740px;
+}
+
+.info-container.shown {
+  @apply opacity-100;
+}
+
+.info-container .title-image {
+  @apply absolute top-0 right-0 w-4/5;
+  z-index: -1;
+  object-fit: cover;
+  object-position: top left;
+  height: 85vh;
+  max-height: 800px;
+}
+.info-container .watch{
+  @apply py-2;
+}
+.info-container .watch span{
+  @apply text-sm;
+}
+
+@media screen and (max-width: 799px) and (min-width: 500px) {
+  .slider-item {
+    min-width: 180px;
+    max-width: 33.333333%;
+  }
+}
+
+@media screen and (max-width: 1099px) and (min-width: 800px) {
+  .slider-item {
+    min-width: 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1100px) {
+  .slider-item {
+    min-width: 20%;
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .slider-item {
+    min-width: 16.66666667%;
+    max-width: 16.66666667%;
+  }
+  .item-infos {
+    padding-bottom: 15px;
+  }
+}
+
