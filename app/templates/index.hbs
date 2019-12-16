@@ -46,13 +46,14 @@
       Tv Shows
     </h2>
     <div class="slider-frame relative left-0">
-      <ThumbMovie 
+      <div class="slider-container flex relative" {{slider-over}} {{slider-show}}>
+        <ThumbMovie 
           @id="rickandmorty"
           @name="Rick and Morty"
           @route="series.rickandmorty"
-          @thumbPath="img/movies/rickandmorty-thumb.jpg"
+          @thumbPath="img/series/rickandmorty-thumb.jpg"
           @year="2017"
-          @rating="16"
+          @rating="13"
           @numberSeason="3"
           @anchor="tvshows"
         />
@@ -67,7 +68,7 @@
           @anchor="tvshows"
         />
         <ThumbMovie 
-          @id="disenchantment2"
+          @id="disenchantment"
           @name="Disenchantment"
           @route="application"
           @thumbPath="img/series/disenchantment-thumb.jpg"
